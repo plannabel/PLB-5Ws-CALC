@@ -14,7 +14,7 @@ It's built with:
  
 ### Try it
 
-**LIVE endpoint:** https://plb-5ws-calc.now.sh
+*dev mode on localhost:8000*
 
 Send an HTTP POST request with a JSON document... here's an example using `curl` for the request and `python` to prettify the JSON response:
 
@@ -38,7 +38,7 @@ curl -H "Content-Type: application/json" -X POST -d '{
         "marriagePlace": "NI",
         "type": "Civil-Marriage,Faith-NonReg-Hindu"
     }
-}' https://plb-5ws-calc.now.sh | python -m json.tool
+}' localhost:8000 | python -m json.tool
 ```
 
 Result:
@@ -111,8 +111,9 @@ Result:
     "marriagePlace": "EnglandWales" | "Scotland" | "NI" | "Abroad",
     "type": "Civil-Marriage"?, "Faith-Anglican"?, "Faith-NonReg-Catholic"?,
              "Faith-ChurchofWales"?, "Faith-NonReg-ChurchofScotland"?,
-             "Faith-CoI"?, "Faith-Methodist"?, "Faith-Presbyterian"?, "Civil-Partnership"?, "Faith-Quaker"?, "Faith-NonReg-Hindu"?
-             "Faith-Jewish"?, "Faith-NonReg-Muslim"?}
+             "Faith-CoI"?, "Faith-Methodist"?, "Faith-Presbyterian"?, 
+             "Civil-Partnership"?, "Faith-Quaker"?, "Faith-NonReg-Hindu"?
+             "Faith-Jewish"?, "Faith-NonReg-Muslim"?
   }
 }
 ```

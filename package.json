@@ -1,0 +1,16 @@
+{
+  "name": "plb-5Ws-datecalc",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": {},
+  "license": "GPL-3.0",
+  "dependencies": {
+    "micro": "^6.2.1",
+    "moment": "^2.17.1",
+    "nodemon": "^1.11.0"
+  },
+  "scripts": {
+    "start": "micro",
+    "dev": "nodemon --exec 'micro -p 8000'"
+  }
+}

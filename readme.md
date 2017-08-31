@@ -1,5 +1,5 @@
 
-## Plannabel • PLB-5Ws-CALC 
+## Plannabel · PLB-5Ws-CALC 
 
 This microservice calculates key dates for your wedding (UK and NI), and is
 is part of Plannabel's 'Five Ws For Your Wedding' web app at https://www.plannabel.com/5Ws

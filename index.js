@@ -10,6 +10,6 @@ module.exports = async (req, res) => {
     const tree = await HDWGM(data);
     send(res, 200, tree);
   } catch (err) {
-    send(res, err.statusCode, `${err.statusCode} ${err}`);
+    send(res, 400, `{"errors":"${err}"}`);
   }
 };

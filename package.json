@@ -5,12 +5,21 @@
   "repository": {},
   "license": "GPL-3.0",
   "dependencies": {
+    "ajv": "^5.2.3",
     "micro": "^9.0.0",
     "micro-dev": "^1.2.3",
     "moment": "^2.19.1"
   },
   "scripts": {
     "start": "micro",
-    "dev": "micro-dev"
+    "dev": "micro-dev",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^21.2.1"
+  },
+  "jest": {
+    "verbose": true,
+    "testPathIgnorePatterns": ["<rootDir>/.history/"]
   }
 }

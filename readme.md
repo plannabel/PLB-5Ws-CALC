@@ -7,6 +7,7 @@ is part of Plannabel's 'Five Ws For Your Wedding' web app at https://www.plannab
 It's built with:
 * [`micro@^9.0.0`](https://github.com/zeit/micro) and [`micro-dev@^1.2.3`](https://github.com/zeit/micro-dev) by [ZEIT](https://zeit.co), asynchronous HTTP microservices with ES6 `async` and `await`.
 * [`moment@^2.19.1`](https://github.com/moment/moment) to calculate the dates.
+* [`ajv@^5.2.3`](https://github.com/epoberezkin/ajv) JSON-Schema validator to validate the JSON object in the request.
 
 ### Run 
 * Development: `npm run dev` starts [`micro-dev`](https://github.com/zeit/micro-dev), "a belt full of tools that make building microservices using micro a breeze! It's only meant to be used in development, not in production".
@@ -23,12 +24,12 @@ curl -H "Content-Type: application/json" -X POST -d '{
     "couple": {
         "PersonA": {
             "gender": "M",
-            "age": "18plus",
+            "aged16to17": false,
             "citizen": "EU-EEA"
         },
         "PersonB": {
             "gender": "F",
-            "age": "16to17",
+            "aged16to17": true,
             "citizen": "UK"
         }
     },
@@ -47,7 +48,7 @@ Result:
 {
   couple: {
     sameSex: false,
-    isUnder18: true,
+    under18: true,
     citizenBothSame: false,
     citizenOneIsUK: true,
     citizenOneIsEUEEA: true,
